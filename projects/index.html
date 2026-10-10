@@ -55,6 +55,37 @@
       cursor: pointer;
     }
 
+    /* Fixed Back Button on Bottom Right */
+    .back-btn-container {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 1000;
+    }
+
+    .back-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: inherit;
+      padding: 0.6rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
     @media (max-width: 480px) {
       .app-card {
         flex-direction: column;
@@ -63,6 +94,10 @@
       }
       .app-info {
         text-align: center;
+      }
+      .back-btn-container {
+        bottom: 1.25rem;
+        right: 1.25rem;
       }
     }
   </style>
@@ -100,5 +135,12 @@
 
     </div>
   </main>
+
+  <!-- Bottom Right Back Button -->
+  <div class="back-btn-container">
+    <a href="https://ezoi.tech/" class="back-btn" rel="noopener noreferrer">
+      <span>←</span> Back to Home
+    </a>
+  </div>
 </body>
 </html>
